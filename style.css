@@ -1,0 +1,669 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --dark-blue: #0a1b4a;
+  --purple: #431c6e;
+  --lavender: #e6d4f7;
+  --yellow: #FDEDC6;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+header {
+  height: 70px;
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.logo {
+  height: 70px;
+  width: fit-content;
+}
+.logo:hover{
+  cursor: pointer;
+}
+
+.logo img {
+  height: 100%;
+  width: 100%;
+}
+
+.register-button,
+.submit-button, 
+.appointment-button {
+  border: none;
+  background: var(--dark-blue);
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 4px;
+  width: fit-content;
+  height: fit-content;
+}
+
+.button-icon {
+  display: flex;
+  align-items: center;
+  padding: 0 5px;
+}
+
+.button-text {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--dark-blue);
+  background: white;
+  padding: 8px 12px;
+}
+
+.hero {
+  background: linear-gradient(to right, var(--dark-blue), var(--purple));
+  display: flex;
+  justify-content: space-between;
+  padding: 55px;
+}
+
+.hero-left {
+  color: #FFBF00;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.hero-left h1 {
+  font-weight: 700;
+  margin: 10px 0;
+}
+
+.hero-left h2 {
+  font-weight: 500;
+}
+
+.hero-left h3 {
+  font-weight: 100;
+  font-size: medium;
+}
+
+.hero-left button {
+  background: #f1c232;
+  color: var(--dark-blue);
+  border: none;
+  border-radius: 30px;
+  padding: 16px 18px;
+  margin-top: 35px;
+  box-shadow: 0 0 10px gray;
+  font-size: 18px;
+  font-weight: 700;
+  display: flex;
+}
+
+.hero-left span {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.vertical-line {
+  width: 1px;
+  background: gray;
+  margin: 0 12px;
+}
+.hero-main{
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  overflow: hidden;
+}
+.column{
+  height: 350px;
+  width: 120px;
+  position: relative;
+}
+.image-list{
+  display: flex;
+  flex-direction: column;
+  animation: scroll 12s linear infinite;
+}
+.image-list img{
+  width: 100%;
+  border-radius: 35px;
+  margin-bottom: 10px;
+  display: block;
+}
+.image-list:hover{
+  cursor: pointer;
+  animation-play-state: paused;
+}
+@keyframes scroll {
+  0%{transform: translateY(0);}
+  100%{transform: translateY(-60%);}
+}
+
+.hero form {
+  background: var(--purple);
+  box-shadow: 0 0 2px lightgray;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Lucida Sans', sans-serif;
+}
+
+.form-heading {
+  color: white;
+  font-weight: 900;
+  font-size: 20px;
+}
+
+.hero form input,
+.hero form textarea {
+  background: gainsboro;
+  margin: 10px 0;
+  padding: 10px 12px;
+  border-radius: 5px;
+  border: none;
+}
+
+.hero form textarea {
+  resize: none;
+  padding: 6px 8px;
+}
+
+input:focus-within,
+textarea:focus-within {
+  outline: none;
+}
+.achievement{
+    width: full;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 40px;
+}
+.laurel-wealth{
+    position: relative;
+    display: flex;
+}
+.laurel-wealth img{
+    width: 150px;
+}
+.laurel-content{
+    position: absolute;
+    left: 45px;
+    top: 27px;
+    font-size: 12px;
+    text-align: center;
+    font-weight: 500;
+    color: var(--purple);
+}
+.laurel-content span{
+    font-weight: 900;
+    font-size: 14px;
+}
+.school-image{
+    width: 150px;
+    margin-left: 50px;
+    margin-top: 10px;
+}
+.participating-school{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-center;
+    align-items: center;
+    margin-top: 50px;
+}
+.participating-school h1{
+    color: var(--purple);
+    font-weight: 700;
+    font-size: 24px;
+}
+.school-choosing h1{
+    color: var(--purple);
+    text-align: center;
+    font-size: 24px;
+    font-weight: 900;
+    margin-top: 50px;
+}
+.schools{
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.school-card{
+    position: relative;
+}
+.school-card img{
+    width: 300px;
+    border-radius: 8px;
+}
+.school-card-text {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: white;
+  font-size: 12px;
+  z-index: 2; 
+}
+
+.school-card-text span{
+    font-size: 16px;
+    font-weight: 700;
+}
+.school-card-text p{
+    margin-top: 5px;
+}
+
+.school-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 98%;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 8px; 
+  z-index: 1;
+}
+
+.appointment{
+    margin-top: 50px;
+    height: 400px;
+    background: linear-gradient(to right, var(--lavender), transparent), url('/assets/meeting.jpg');
+    background-repeat: no-repeat;
+    background-position: right;
+    display: flex;
+    align-items: center;
+}
+.appointment-text{
+    margin-left: 45px;
+}
+.appointment-text h3{
+    color: var(--purple);
+    font-style: italic;
+    margin: 15px 0;
+}
+.appointment-text h1{
+    color: black;
+    font-size: 36px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.features{
+    display: grid;
+    justify-content: space-around;
+    gap: 25px;
+    align-items: center;
+    background: linear-gradient(to right, var(--purple), var(--dark-blue));
+    padding: 50px 0;
+    margin-top: 50px;
+}
+.features-heading{
+    color: white;
+    font-size: 28px;
+}
+.features h2{
+    color: black;
+    font-size: 18px;
+    margin-top: 20px;
+    margin-bottom: 7px;
+}
+.features p{
+    color: gray;
+    font-size: 12px;
+    margin-bottom: 15px;
+}
+.features-cards{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 50px;
+}
+.features-cards img{
+    height: 40px;
+}
+.features-card{
+    background-color: var(--lavender);
+    border-radius: 10px;
+    padding: 10px;
+}
+.line-break{
+    height: 0.5px;
+    background-color: darkgray;
+}
+.curved{
+    height: 150px;
+    background: linear-gradient(to left, var(--dark-blue), var(--purple));
+    border-radius: 0 0 50% 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+.arrow-button{
+    border: 2px white solid;
+    padding: 10px 13px;
+    height: fit-content;
+    border-radius: 50%;
+}
+.arrow-left{
+    background-color: transparent;
+}
+.arrow-right{
+    background-color: white;
+}
+.footer-top{
+    background: linear-gradient(to left, var(--dark-blue) ,var(--purple));
+    display: flex;
+    color: white;
+    justify-content: space-between;
+    padding: 25px 0;
+    margin-top: 50px;
+}
+.corporate-office{
+    display: flex;
+}
+.ahmedabad-office{
+    display: flex;
+}
+.phone-call{
+    display: flex;
+}
+.footer-top span{
+    font-size: 14px;
+}
+.footer-top p{
+    font-size: 12px;
+    color: darkgray;
+    margin-top: 7px;
+}
+.footer-icons{
+    background-color: var(--lavender);
+    padding: 8px;
+    border-radius: 5px;
+    height: fit-content;
+    margin-right: 8px;
+}
+.social-icons{
+    margin-top: 10px;
+}
+.footer-bottom{
+    background-color: white;
+    color: var(--purple);
+    padding: 10px 0;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+
+}
+.end-line{
+    height: 5px;
+    background-color: black;
+}
+
+/* Responsive */
+
+/* Mobile Responsive */
+@media screen and (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .hero-left {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .hero-left h1 {
+    font-size: 22px;
+  }
+
+  .hero-left h2 {
+    font-size: 18px;
+  }
+
+  .hero-left h3 {
+    font-size: 14px;
+  }
+
+  .hero-left button {
+    font-size: 16px;
+    padding: 14px 16px;
+  }
+
+  .vertical-line {
+    display: none;
+  }
+
+  .hero form {
+    width: 100%;
+    padding: 15px;
+  }
+
+  /* Laurel Wealth Section */
+  .achievement {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .laurel-wealth {
+    margin: 20px;
+  }
+
+  .school-choosing h1 {
+    font-size: 20px;
+  }
+
+  .schools {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .school-card {
+    width: 100%;
+    margin: 15px 0;
+  }
+
+  .school-card img {
+    width: 100%;
+  }
+
+  /* Appointment Section */
+  .appointment {
+    height: auto;
+    padding: 40px 0;
+    background-position: center;
+  }
+
+  .appointment-text {
+    text-align: center;
+    margin-left: 0;
+  }
+
+  .appointment-text h1 {
+    font-size: 28px;
+  }
+
+  .features {
+    padding: 30px 0;
+  }
+
+  .features-heading {
+    font-size: 24px;
+  }
+
+  .features h2 {
+    font-size: 16px;
+  }
+
+  .features-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .features-card {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .line-break {
+    display: none;
+  }
+
+  .curved {
+    flex-direction: column;
+    padding: 40px 0;
+  }
+
+  /* Footer */
+  .footer-top {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  /* For smaller devices like phones in portrait mode */
+  
+
+  .hero-left h1 {
+    font-size: 20px;
+  }
+
+  .hero-left h2 {
+    font-size: 16px;
+  }
+
+  .hero-left button {
+    font-size: 14px;
+    padding: 10px 14px;
+  }
+
+
+  .hero-left span {
+    font-size: 10px;
+  }
+
+  form{
+    margin-top: 25px;
+  }
+  .school-card-text {
+    font-size: 12px;
+  }
+
+  .school-card-text span {
+    font-size: 14px;
+  }
+
+  .school-card-text p {
+    font-size: 12px;
+  }
+
+  .appointment-text h3 {
+    font-size: 16px;
+  }
+
+  .appointment-text h1 {
+    font-size: 24px;
+  }
+
+  .features-heading {
+    font-size: 22px;
+  }
+
+  .features h2 {
+    font-size: 14px;
+  }
+
+  .features p {
+    font-size: 10px;
+  }
+
+  .arrow-button {
+    padding: 8px 10px;
+  }
+  .footer-top .logo{
+    width: 120px;
+    height: 100px;
+  }
+  .footer-top{
+    gap: 25px;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  /* Tablet devices */
+  .logo{
+    height: 70px;
+    width: 100px;
+  }
+  .hero {
+    display: flex;
+    flex-direction: column;
+    padding: 40px 20px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero-left h1 {
+    font-size: 26px;
+  }
+
+  .hero-left h2 {
+    font-size: 20px;
+  }
+
+  .hero-left h3 {
+    font-size: 16px;
+  }
+
+  .hero-left button {
+    font-size: 18px;
+    padding: 14px 18px;
+  }
+
+  form{
+    margin-top: 50px;
+  }
+  .schools {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .school-card {
+    margin-right: 50px;
+    margin-top: 25px;
+  }
+
+  .appointment {
+    height: auto;
+    background-position: center center;
+    padding: 50px 20px;
+  }
+
+  .appointment-text h1 {
+    font-size: 32px;
+  }
+
+  .features-cards {
+    flex-wrap: wrap;
+  }
+
+  .features-card {
+    width: 45%;
+    margin: 10px;
+  }
+  .footer-icons{
+    padding: 4px;
+  }
+}
